@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/fondo"
+    android:gravity="center">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#4F0BCF"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Contenedor de los campos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:clipToOutline="true"
+        android:outlineProvider="background">
+
+        <!-- Campo de Usuario -->
+        <EditText
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"
+            android:textColorHint="#666666"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Campo de Contraseña -->
+        <EditText
+            android:id="@+id/txtContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textColorHint="#666666"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botón Login -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar sesión"
+            android:backgroundTint="#4F0BCF"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:elevation="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
