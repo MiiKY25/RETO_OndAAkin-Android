@@ -1,5 +1,6 @@
 package com.example.ondaakin4
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -40,6 +41,9 @@ class LoginController : AppCompatActivity() {
                 override fun onResponse(call: Call<Respuesta>, response: Response<Respuesta>) {
                     if (response.isSuccessful) {
                         Toast.makeText(this@LoginController, response.body()?.mensaje, Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@LoginController, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     } else {
                         Toast.makeText(this@LoginController, "Usuario ya existe", Toast.LENGTH_SHORT).show()
                     }
